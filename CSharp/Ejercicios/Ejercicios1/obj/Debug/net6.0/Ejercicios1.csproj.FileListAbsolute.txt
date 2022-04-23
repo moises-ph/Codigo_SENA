@@ -1,0 +1,15 @@
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\bin\Debug\net6.0\Ejercicios1.exe
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\bin\Debug\net6.0\Ejercicios1.deps.json
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\bin\Debug\net6.0\Ejercicios1.runtimeconfig.json
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\bin\Debug\net6.0\Ejercicios1.dll
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\bin\Debug\net6.0\ref\Ejercicios1.dll
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\bin\Debug\net6.0\Ejercicios1.pdb
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.csproj.AssemblyReference.cache
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.AssemblyInfoInputs.cache
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.AssemblyInfo.cs
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.csproj.CoreCompileInputs.cache
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.dll
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\ref\Ejercicios1.dll
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.pdb
+C:\Users\SENA\Documents\Moises SENA\Codigo_SENA\CSharp\Ejercicios\Ejercicios1\obj\Debug\net6.0\Ejercicios1.genruntimeconfig.cache
