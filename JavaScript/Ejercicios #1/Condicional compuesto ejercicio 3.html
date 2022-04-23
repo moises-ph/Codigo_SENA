@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var pi, figuras, lado, radio, base, altura, area, raiz;
+        pi = 3.141592
+        figuras = prompt("Elija la letra de la figura geométrica cuya área desea hallar" + "\nT: Triangulo Equilátero" + "\nC: Circulo" + "\nR: Rectángulo")
+        if(figuras == 'T'){
+            lado = parseInt(prompt("Digite la base del triangulo: "))
+            altura = parseInt(prompt("Digite la altura del triangulo: "))
+            area = (lado * altura) / 2
+            document.write("El área del triángulo es de " + area)
+        }
+        else if(figuras == 'C'){
+            radio = parseInt(prompt("Ingrese el radio del circulo: "))
+            area = (radio * radio) * pi
+            document.write("El área del círculo es de " + area)
+        }
+        else if(figuras == 'R'){
+            base = parseInt(prompt("Ingrese la base del rectángulo: "))
+            altura = parseInt(prompt("Ingrese la altura del rectángulo: "))
+            area = base * altura
+            document.write("El área del rectángulo es " + area)
+        }
+        else{
+            document.write("Ingrese una opción valida")
+        }
+    </script>
+</body>
+</html>

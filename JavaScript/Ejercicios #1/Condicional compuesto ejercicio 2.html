@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var edad, sexo;
+        sexo = prompt("Ingrese su sexo: ");
+        edad = prompt("Ingrese su edad: ");
+        edad = parseInt(edad);
+        if(sexo == 'Hombre'){
+            if(edad >= 60){
+                document.write("Usted se puede jubilar");
+            }
+            else{
+                document.write("Usted no se puede jubilar");
+            }
+        }
+        else if(sexo == 'Mujer'){
+            if(edad >= 54 ){
+                document.write("Usted se puede jubilar");
+            }
+            else{
+                document.write("Usted no se puede jubilar");
+            }
+        }
+    </script>
+</body>
+</html>
+
