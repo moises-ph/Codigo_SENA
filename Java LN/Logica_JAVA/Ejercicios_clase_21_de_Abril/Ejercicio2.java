@@ -1,7 +1,9 @@
-public class Ejercicio2{
+public class Ejercicio2 {
     public static void main(String[] args){
-        int suma, resta, multiplicacion;
-        float division;
+        int suma = 0;
+        int resta = 0;
+        int multiplicacion = 0;
+        float division = 0;
         int[] numeros_1 = {1,2,3,4,5};
         int[] numeros_2 = {1,2,3,4,5};
         for(int i = 0; i < numeros_1.length; i++){

@@ -8,6 +8,6 @@ public class Radio_PI_metodo_Math{
         //Formula area circulo, usamos algunos de los metodos de Math
         double area=Math.PI*Math.pow(radio, 2);
   
-        System.out.println("El area del circulo es "+area);
+        JOptionPane.showMessageDialog(null, "El area del circulo es "+area);
     }
 }

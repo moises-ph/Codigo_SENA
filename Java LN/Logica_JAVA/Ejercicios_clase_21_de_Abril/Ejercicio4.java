@@ -16,7 +16,10 @@ public class Ejercicio4 {
             for(int i=0; i < estudiantes.length; i++){
                 if(estudiantes[i].equals(buscar)){
                     encontrado = true;
-                    JOptionPane.showMessageDialog(null, "El estudiante " + buscar + " se encuentra en la posicion " + i);
+                    JOptionPane.showMessageDialog(null, "El estudiante " + buscar + " se encuentra en la posicion " + (i+1));
+                    break;
+                }else{
+                    encontrado = false;
                 }
             }
             if(encontrado == false){

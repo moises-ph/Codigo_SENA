@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Radio_PI_metodo_Math",
+            "request": "launch",
+            "mainClass": "Radio_PI_metodo_Math",
+            "projectName": "Codigo_SENA_b3638a6e"
+        },
+        {
+            "type": "java",
             "name": "Launch Ejercicio4",
             "request": "launch",
             "mainClass": "Ejercicio4",

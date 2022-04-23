@@ -8,7 +8,7 @@ public class Ejercicio3{
         num_estudiantes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de estudiantes"));
         num_notas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de notas"));
         int[] notas = new int[num_notas];
-        int[] promedio = new int[num_estudiantes];
+        float[] promedio = new float[num_estudiantes];
         String[] estudiantes = new String[num_estudiantes];
         List<String> perdio = new ArrayList<>();
         List<String> gano = new ArrayList<>();
@@ -19,7 +19,7 @@ public class Ejercicio3{
                 notas[j] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nota del estudiante " + estudiantes[i]));
                 promedio_temp  += notas[j];
             }
-            promedio[i] = promedio_temp / num_notas;
+            promedio[i] = (float)promedio_temp / (float)num_notas;
             if (promedio[i] < 3){
                 perdio.add(estudiantes[i]);
             }
