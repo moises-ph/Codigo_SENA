@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Práctica 2</title>
+  </head>
+
+  <body>
+    <h1>Tienda de Celulares</h1>
+    Visitas: <h2 id="visitas"></h2>
+    <a href="#info1">Información 1</a>
+    <a href="#info2">Información 2</a>
+    <h2>Menú galerias</h2>
+    <a href="./galeria1.html">Galeria 1</a>
+    <a href="./galeria2.html">Galeria 2</a>
+    <main>
+      <p>Honestidad y Calidad nuestros compromisos</p>
+    </main>
+    <img src="imagenes/tienda.jpg" alt="Imagen de la tienda">
+    <h2 id="info1">Información 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, 
+      enim! Repellat necessitatibus sapiente, voluptatibus esse cum assumenda 
+      earum, incidunt dolore itaque obcaecati suscipit fuga quo aliquid repellendus ducimus provident iste?</p>
+    <h2 id="info2">Información 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, 
+      enim! Repellat necessitatibus sapiente, voluptatibus esse cum assumenda 
+      earum, incidunt dolore itaque obcaecati suscipit fuga quo aliquid repellendus ducimus provident iste?</p>
+    <h3>Links de Interes</h3>
+    <a href="https://es.wikipedia.org/wiki/Tel%C3%A9fono_m%C3%B3vil">Teléfono móvil</a>
+
+    <script>
+      let visitas = localStorage.getItem('visitas');
+      if(visitas == null){
+        localStorage.setItem('visitas', 1);
+      }
+      else {
+        localStorage.setItem('visitas', parseInt(visitas)+1);
+        document.getElementById('visitas').innerHTML = localStorage.getItem('visitas');
+      }
+    </script>
+
+  </body>
+
+</html>

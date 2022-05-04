@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Práctica 2</title>
+  </head>
+
+  <body>
+    <h1>Tienda de Celulares</h1>
+    Visitas: <h2 id="visitas"></h2>
+    <a href="#info1">Información 1</a>
+    <a href="#info2">Información 2</a>
+    <h2> Menú Galerias</h2>
+    <a href="./galeria1.html">Galería 1</a>
+    <a href="./galeria2.html" target="_blank">Galería 2</a>
+
+
+    <main>
+      <p>Honestidad y Calidad nuestros compromisos</p>
+    </main>
+    <img src="./imagenes/tienda.jpg">
+    <h2 id="info1">Información 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla cupiditate quam voluptatibus, dolorum, saepe similique magnam tempora impedit ea voluptatem soluta ab ratione, provident nihil perferendis illo harum reiciendis.</p>
+    <h2 id="info2">Información 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla cupiditate quam voluptatibus, dolorum, saepe similique magnam tempora impedit ea voluptatem soluta ab ratione, provident nihil perferendis illo harum reiciendis.</p>
+    <h3>Links de interés:</h3>
+    <h4>
+      <a href="https://www.alkosto.com/celulares/telefonos-celulares/c/BI_101_ALKOS">Alkosto</a>
+    </h4>
+
+    <script>
+      let visitasActuales = localStorage.getItem("visitas");
+      if (visitasActuales){
+        let aumento = parseInt(visitasActuales) + 1;
+        document.getElementById("visitas").innerHTML = aumento;
+        localStorage.setItem("visitas", aumento);
+      }else{
+        localStorage.setItem("visitas", 1);
+        document.getElementById("visitas").innerHTML = 1;
+      }
+    </script>
+
+
+  </body>
+
+</html>

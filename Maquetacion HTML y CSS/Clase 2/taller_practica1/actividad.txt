@@ -1,0 +1,4 @@
+Cree un sitio web con base en el mismo esquema del sitio taller_practica1(trabaje sobre los archivos index.html y stock.html)que contenga
+por lo menos 2 imagenes que se encuentren en una subcarpeta del sitio(p.e. la carpeta imágenes) y por lo menos 2 imágenes que se encuentren
+en una carpeta de nivel superior a la del proyecto(p.e. una carpeta similar a la carpeta directorio_imagenes1_imagen_exterior a la cual 
+tenga que acceder usando ../). La temática del sitio es de su elección. Haga el despliegue en netlify.com

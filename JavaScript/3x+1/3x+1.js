@@ -32,6 +32,5 @@ function problema(){
                 fin += 1;
             }
         }
-    }
-    
+    }   
 }
