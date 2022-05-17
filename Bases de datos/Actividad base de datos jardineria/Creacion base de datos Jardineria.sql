@@ -103,4 +103,4 @@ alter table pago add constraint fk_cliente2 foreign key (codigo_cliente) referen
 alter table pedido add constraint fk_cliente foreign key (codigo_cliente) references cliente(codigo_cliente);
 alter table detalle_pedido add constraint fk_pedido foreign key (codigo_pedido) references pedido(codigo_pedido);
 alter table detalle_pedido add constraint fk_producto foreign key (codigo_producto) references producto(codigo_producto);
-alter table producto add constraint fk_gama foreign key (gama) references gama_producto(gama)
+alter table producto add constraint fk_gama foreign key (gama) references gama_producto(gama);
