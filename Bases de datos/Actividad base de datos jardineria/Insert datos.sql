@@ -145,4 +145,3 @@ INSERT into detalle_pedido(codigo_pedido, codigo_producto, cantidad, precio_unid
 INSERT into detalle_pedido(codigo_pedido, codigo_producto, cantidad, precio_unidad, numero_linea) values(8, '8', 4, 500000.50, 80);
 INSERT into detalle_pedido(codigo_pedido, codigo_producto, cantidad, precio_unidad, numero_linea) values(9, '9', 3, 800000.50, 90);
 INSERT into detalle_pedido(codigo_pedido, codigo_producto, cantidad, precio_unidad, numero_linea) values(10, '10', 4, 400000.50, 100);
-
