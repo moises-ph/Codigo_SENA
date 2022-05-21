@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="formulario">
+    <div class="formulario">
         <div class="Registro">
-            <h3>Registro de Usuario</h3>
+        <h3>Registro de Usuario</h3>
         </div>
-        <form action="javascript:;" onsubmit="ValidateSumbit(this)" method="post" name="Formulario">
+        <form action="conexion_registro.php" method="post" name="Formulario">
             <label for="Usuario">Tipo de usuario</label>
             <select name="Usuario" id="elusuario" class="select">
             <option value="">Seleccione</option>
@@ -37,15 +38,15 @@
             <option value="Tarjeta de identidad">Tarjeta de identidad</option>
             </select>
             <label for="documento">Documento de identidad:</label>
-            <input name="idDocumentos" type="number" placeholder="Numero de documento de identidad" maxlength="10" id="documento">
+            <input name="id" type="number" placeholder="Numero de documento de identidad" maxlength="10" id="documento">
             <label for="nombre">Nombre:</label>
-            <input name="name" type="text" maxlength="45" placeholder="Nombre..." id="nombre">
+            <input name="nombre" type="text" maxlength="45" placeholder="Nombre..." id="nombre">
             <label for="apellidos">Apellidos:</label>
-            <input name="lastname" type="text" name="Apellidos" id="" placeholder="Apellidos..." id="apellidos">
+            <input type="text" name="apellido" id="" placeholder="Apellidos..." id="apellidos">
             <label for="edad">Edad:</label>
-            <input name="age" type="number" maxlength="3" placeholder="Edad" id="edad">
+            <input name="edad" type="number" maxlength="3" placeholder="Edad" id="edad">
             <label for="Genero">Genero:</label>
-            <select name="gender" id="elgenero" value="Genero" name="Genero" placeholder="Genero" class="select"> 
+            <select name="Genero" id="elgenero" value="Genero" name="Genero" placeholder="Genero" class="select"> 
             <option value="">Seleccione</option>
             <option value="Hombre">Hombre</option>
             <option value="Mujer">Mujer</option>
@@ -54,65 +55,13 @@
             <label for="email" >Email:</label>
             <input name="email" type="email" placeholder="Email"  id="email">
             <label for="con_email">Confirmar email:</label>
-            <input name="email_con" type="text" placeholder="Confirmar" id="con_email">
+            <input type="text" placeholder="Confirmar" id="con_email">
             <label for="contraseña">Contraseña</label>
-            <input name="password" type="password" id="contraseña">
+            <input name="contraseña" type="password" id="contraseña">
             <label for="con_contraseña">Confirmar contraseña</label>
-            <input name="password_conf" type="password" id="con_contraseña">
+            <input type="password" id="con_contraseña">
             <input type="submit">
         </form>
     </div>
-    <script>
-        function ValidateSumbit(form){
-            // Variables para enviar
-            var id= form.idDocumentos.value;
-            var nombre= form.name.value;
-            var apellido= form.lastname.value;
-            var edad= form.age.value;
-            var email= form.email.value;
-            var password= form.password.value;
-            var genero = form.gender.value;
-            var tipo_id = form.Tipo_documento.value;
-            var tipo_usr = form.Usuario.value;
-
-            // Variables para validar
-            let password_same = true;
-            let email_same = true;
-            let conf_email = form.email_con.value;
-            let conf_passW = form.password_conf.value;
-
-            if(conf_passW != password){
-                alert('Ingrese la misma contraseña');
-                document.getElementById('contraseña').focus();
-                document.getElementById('con_contraseña').focus();
-                password_same = false;
-            }
-
-            if(conf_email != email){
-                alert('Ingrese la misma dirección de correo');
-                document.getElementById('correo').focus();
-                document.getElementById('con_correo').focus();
-                email_same = false;
-            }
-
-            if(password_same && email_same){
-                parseInt(id);
-                DATA = {
-                    type : 'INSERT',
-                    id: id,
-                    nombre: nombre,
-                    apellido: apellido,
-                    edad: edad,
-                    email: email,
-                    password: password,
-                    genero: genero,
-                    tipo_id: tipo_id,
-                    tipo_usr: tipo_usr
-                }
-            }
-            return true;
-        }
-    </script>
-    <script type="module" src="Script.js"></script>
 </body>
 </html>
