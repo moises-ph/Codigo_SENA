@@ -123,16 +123,16 @@ INSERT into pago(codigo_cliente, forma_pago, id_transaccion, fecha_pago, total) 
 INSERT into pago(codigo_cliente, forma_pago, id_transaccion, fecha_pago, total) values (10,'Efectivo','10', '2022-05-17',400000.50 );
 
 /* Datos en pedido */
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(1,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 1);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(2,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 2);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(3,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 3);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(4,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 4);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(5,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 5);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(6,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 6);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(7,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 7);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(8,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 8);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(9,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 9);
-INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(10,2022-05-17, '2022-05-24', 'En espera a entregar al cliente', 10);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(1,'2022-05-17', '2022-05-24', 'En espera', 1);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(2,'2022-05-17', '2022-05-24', 'En espera', 2);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(3,'2022-05-17', '2022-05-24','En espera' , 3);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(4,'2022-05-17', '2022-05-24','En espera' , 4);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(5,'2022-05-17', '2022-05-24', 'En espera', 5);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(6,'2022-05-17', '2022-05-24', 'En espera', 6);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(7,'2022-05-17', '2022-05-24', 'En espera', 7);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(8,'2022-05-17', '2022-05-24', 'En espera', 8);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(9,'2022-05-17', '2022-05-24', 'En espera', 9);
+INSERT into pedido(codigo_pedido, fecha_pedido, fecha_esperada, estado, codigo_cliente) values(10,'2022-05-17', '2022-05-24','En espera', 10);
 
 /* Datos en detalle_pedido */
 INSERT into detalle_pedido(codigo_pedido, codigo_producto, cantidad, precio_unidad, numero_linea) values(1, '1', 4, 400000.50, 10);
