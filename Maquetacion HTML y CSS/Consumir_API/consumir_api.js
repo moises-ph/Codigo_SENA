@@ -5,52 +5,54 @@ var humedad = 0;
 var viento_vel = 0;
 var nombre = '';
 var DATA = [];
+var output_div = [];
+var card = [];
+var idN = 0;
+
+document.getElementById('consultar').addEventListener('click', ciudad);
+document.getElementById('input').addEventListener('keypress', e => {
+  console.log(e.keyCode);
+  if (e.keyCode === 13) {
+    ciudad();
+  }
+});
 
 function mostrar(obj){
+  idN ++;
   let output = document.getElementById('output');
-  output.innerHTML += `
-    <ul>
-      <li>Clima: ${obj[0]}</li>
-      <li>Clima Descripcion: ${obj[1]}</li>
-      <li>Temperatura: ${obj[2]}</li>
-      <li>Humedad: ${obj[3]}</li>
-      <li>Velocidad Viento: ${obj[4]}Km/h</li>
-      <li>Nombre: ${obj[5]}</li>
-    </ul>`; 
-  DATA = [];
-  clima = '';
-  clima_descripcion = '';
-  temperatura = 0;
-  humedad = 0;
-  viento_vel = 0;
-  nombre = '';
+  output.innerHTML = '';
+  output_div.push(`<div class="card" id='div${idN}' style= 'visibility: "hidden"'><h5 class="card-text">${obj[5]}</h5><h6 class="card-text">${obj[0]}</h6><p class="card-text">${obj[1]}</p><p class="card-text">Temperatura: ${obj[2]}°C</p><p class="card-text">Humedad: ${obj[3]}%</p><p class="card-text">Viento: ${obj[4]}km/h</p></div>`);
+  console.log(output_div);
+  for (let i = 0; i < output_div.length; i++) {
+    let card_output = output_div[i];
+    card.push(card_output);
+  }
+  card.reverse();
+  let id_temp = 0;
+  for (let i = 0; i < card.length; i++) {
+    output.innerHTML += card[i];
+  }
+  card = [];
 }
 
 async function consulta(city){
-  console.log(city);
   var URL= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ebfabd21f6f0f7263333506768d5241f`;
-  console.log(URL);
   await fetch(URL)
     .then( response => response.json()).then( res => {
-      console.log(res);
       clima = res.weather[0].main;
       clima_descripcion = res.weather[0].description; 
-      temperatura = res.main.temp - 273.15;
+      temperatura = (res.main.temp - 273.15).toFixed(2);
       humedad = res.main.humidity;
       viento_vel = res.wind.speed;
       nombre = res.name;
-      console.log(clima, clima_descripcion, temperatura, humedad, viento_vel, nombre);
       return clima, clima_descripcion, temperatura, humedad, viento_vel, nombre;
     }).catch( err => {
-      console.log(err);
     });
     DATA = [clima, clima_descripcion, temperatura, humedad, viento_vel, nombre];
-    console.log(DATA);
     mostrar(DATA);
 }
 
 function ciudad() {
-    let query = document.getElementById('ciudad').value.toLowerCase();
-    console.log(query);
+    let query = document.getElementById('input').value.toLowerCase();
     consulta(query);
 }

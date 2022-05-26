@@ -1,12 +1,51 @@
 *{
   font-family: 'Ubuntu', sans-serif;
-  background-image: url('./fondo.jpg');
+  /*background-image: url('./fondo.jpg');*/
+  background-color: #44BBA4;
   background-size: 100%;
   color: white;
   border:none;
+  font-size: 25px;
 }
 h1{
   text-align: center;
   font-size: 50px;
-  
+}
+
+input{
+  outline: 0;
+  border-bottom: 1px solid #D7E1CD;
+}
+
+.contenedor{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#output{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  background-color: #5F8C85;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #D7E1CD;
+  visibility: visible;
+  width: 300px;
+  margin-left: 2%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card p{
+  justify-content: center;
+}
+
+.card-text{
+  background-color: #5F8C85;
 }

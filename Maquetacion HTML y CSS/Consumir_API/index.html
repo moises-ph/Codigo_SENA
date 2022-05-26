@@ -12,9 +12,11 @@
 </head>
 <body>
   <h1>Entérate del clima en la ciudad que desees</h1>
-  <input placeholder="Que ciudad deseas consultar?" id="ciudad">
-  <button onclick="ciudad()" id="consultar">Consultar</button>
-  <p id="output"></p>
+  <div class="contenedor">
+    <input placeholder="Que ciudad deseas consultar?" id="input">
+    <button id="consultar">Consultar</button>
+  </div>
+  <div id="output"></div>
   <script src="./consumir_api.js"></script>
 </body>
 </html>
