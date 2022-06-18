@@ -17,7 +17,13 @@ public class Ejercicio3{
             estudiantes[i] = JOptionPane.showInputDialog("Ingrese el nombre del estudiante");
             for(int j=0; j<num_notas; j++){
                 notas[j] = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nota del estudiante " + estudiantes[i]));
-                promedio_temp  += notas[j];
+                if (notas[j] > 5){
+                    j--;
+                    System.out.println("Ingrese una nota del 1 al 5");
+                }
+                else {
+                    promedio_temp += notas[j];
+                }
             }
             promedio[i] = (float)promedio_temp / (float)num_notas;
             if (promedio[i] < 3){
