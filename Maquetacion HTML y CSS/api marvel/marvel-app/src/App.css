@@ -46,3 +46,38 @@
 .lista li button:hover {
   background-color: #c05164;
 }
+
+.container-characters{
+  color:white;
+}
+
+.container-characters button{
+  color: white;
+  border: none;
+  background-color: #ca233e;
+}
+
+.output-char .personaje{
+  margin-top: 0;
+  height: 0;
+  margin-bottom: 3%;
+}
+
+.output-char{
+  margin-top: 2%;
+  padding: 2%;
+}
+
+.output-char .imagen-personaje{
+  margin-right: 2%;
+}
+
+
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
+.info .descripcion{
+  width: 30%;
+}
