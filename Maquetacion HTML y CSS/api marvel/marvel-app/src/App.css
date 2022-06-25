@@ -2,6 +2,10 @@
   background-color: #192d36;
 }
 
+html, body{
+  max-width: 100vw;
+}
+
 .titulo{
   color: #fff;
   font-size: 2.5rem;
@@ -49,6 +53,8 @@
 
 .container-characters{
   color:white;
+  background-color: #31343E;
+  width: 35%;
 }
 
 .container-characters button{
@@ -57,27 +63,45 @@
   background-color: #ca233e;
 }
 
+.container-characters h3{
+  background-color: transparent;
+}
+
 .output-char .personaje{
   margin-top: 0;
   height: 0;
   margin-bottom: 3%;
+  background-color: transparent;
 }
 
 .output-char{
   margin-top: 2%;
   padding: 2%;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
 }
 
 .output-char .imagen-personaje{
   margin-right: 2%;
+  background-color: transparent;
 }
 
 
 .info{
   display: flex;
   flex-direction: column;
+  background-color: transparent;
+  width: auto;
+  height: 10%;
 }
 
 .info .descripcion{
-  width: 30%;
+  background-color: transparent;
+  text-align: justify;
+}
+
+.output-char .personaje{
+  background-color: transparent;
+  margin: 20px;
 }

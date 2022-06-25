@@ -15,7 +15,7 @@ function App() {
   const [visibility_serie, setVisSer] = useState('hidden');
   const [visibility_storie, setVisSt] = useState('hidden');
 
-  async function api (e){
+  function api (e){
     switch (e.target.value) {
       case 'characters':
         setVisChar('visible')
