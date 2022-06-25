@@ -2,49 +2,44 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { ReactDOM } from 'react';
 
-class Personajes extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return(
-        <div className='personaje'>
-            <a className='imagen-personaje' target='blank' href={this.props.ref_url}>
-                <img src={this.props.img_src}></img>
-            </a>
-            <div className='info'>
-                <h2 className='personaje'>{this.props.name}</h2>
-                <p className='descripcion'>{this.props.description}</p>
-            </div>
-        </div>
-        )
-    }
-}
-
 function Characters(props) {
-    const [output, setOut] = useState('');
+    const [output_count, setOut] = useState(<></>);
 
     const consultar_esp = async (query) =>{
+        document.getElementById('output').style.display = 'grid';
         let url = `http://gateway.marvel.com/v1/public/characters?limit=100&nameStartsWith=${query.target.value}&ts=1000&apikey=c1877a4b5d3693afc04219bd658fe78c&hash=39a54346f077173d691ac33efe20ae09`
         setOut();
         if(query.target.value === ''){
-            setOut();
+            setOut([]);
         }
         else {
             let data;
             await fetch(url)
                 .then(res => res.json()).then(data_res => {
-                    data_res.data.results.map(item => ReactDOM.render(<Personajes ref_url = {item.urls[0].url} img_src = {item.thumbnail.path + '/portrait_incredible.' + item.thumbnail.extension} nombre = {item.name} descripcion = {item.description} />, document.getElementById('output')))
-                    document.getElementById('output').style.display = 'grid';
-                }).catch(() => {
-                    setOut(<h2>Personaje no encontrado</h2>)
+                    data = data_res.data.results;
+                    console.log(data);
+                    data.map(value =>{
+                        let ref_url = value.urls[0].url;
+                        let img_src = value.thumbnail.path + '/standard_amazing.' + value.thumbnail.extension;
+                        let name = value.name;
+                        let description = value.description;
+                        let div =  document.getElementById('output');
+                        div.innerHTML += `
+                            <div class='personaje'>
+                                <a class='imagen-personaje' target='blank' href=${ref_url}>
+                                    <img src=${img_src}></img>
+                                </a>
+                                <div class='info'>
+                                    <h2 class='personaje'>${name}</h2>
+                                    <p class='descripcion'>${description}</p>
+                                </div>
+                            </div>`})
+                }).catch((err) => {
+                    document.getElementById('output').innerHTML = `<h2>Personaje no encontrado</h2>
+                    <p>Error: ${err}</p>`
                 });
         }
     };
-
-    const consultar_abc = async () =>{
-        fetch('')
-    }
 
     return (
         <>
