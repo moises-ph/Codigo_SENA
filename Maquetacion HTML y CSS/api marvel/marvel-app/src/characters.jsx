@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ReactDOM } from 'react';
 
 function Characters(props) {
-    const [output_count, setOut] = useState(<></>);
+    const [output_count, setOut] = useState([]);
 
     const consultar_esp = async (query) =>{
         document.getElementById('output').style.display = 'grid';
@@ -19,24 +19,25 @@ function Characters(props) {
                     data = data_res.data.results;
                     console.log(data);
                     data.map(value =>{
+                        let id = value.id;
                         let ref_url = value.urls[0].url;
                         let img_src = value.thumbnail.path + '/standard_amazing.' + value.thumbnail.extension;
                         let name = value.name;
                         let description = value.description;
                         let div =  document.getElementById('output');
-                        div.innerHTML += `
-                            <div class='personaje'>
-                                <a class='imagen-personaje' target='blank' href=${ref_url}>
-                                    <img src=${img_src}></img>
+                        setOut(e => [...e, <div class='personaje' key={id}>
+                                <a class='imagen-personaje' target='blank' href={ref_url}>
+                                    <img src={img_src}></img>
                                 </a>
                                 <div class='info'>
-                                    <h2 class='personaje'>${name}</h2>
-                                    <p class='descripcion'>${description}</p>
+                                    <h2 class='personaje'>{name}</h2>
+                                    <p class='descripcion'>{description}</p>
                                 </div>
-                            </div>`})
+                            </div>])
+                    })
                 }).catch((err) => {
-                    document.getElementById('output').innerHTML = `<h2>Personaje no encontrado</h2>
-                    <p>Error: ${err}</p>`
+                    setOut(<><h2>Personaje no encontrado</h2>
+                    <p>Error: ${err}</p></>)
                 });
         }
     };
@@ -46,7 +47,7 @@ function Characters(props) {
         <div className='container-characters' style={{visibility: props.showing}}>
             <h3>Personajes</h3>
             <input onChange={consultar_esp}></input>
-            <div className='output-char' id='output' style={{display: 'none'}}></div>
+            <div className='output-char' id='output' style={{display: 'none'}}>{output_count}</div>
         </div>
         </>
     )
